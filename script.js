@@ -21,7 +21,7 @@ document.getElementById('orderBtn').addEventListener('click', async function() {
         const { data, error } = await supabaseClient
             .from('pedidos')
             .insert([
-                { producto: 'Pollo a la Broaster (Pieza)', estado: 'Pendiente' }
+                { producto: 'Medio Broaster', estado: 'Pendiente' }
             ]);
 
         if (error) {

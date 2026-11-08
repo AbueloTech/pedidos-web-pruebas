@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Prueba - Pedidos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importar el cliente de Supabase desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Pedidos QR</h1>
+        <p>Selecciona un producto de prueba:</p>
+        
+        <div class="product-card">
+            <h3>Pollo a la Broaster (Pieza)</h3>
+            <p>$15,000 COP</p>
+            <button id="orderBtn">Hacer Pedido de Prueba</button>
+        </div>
+
+        <div id="statusMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

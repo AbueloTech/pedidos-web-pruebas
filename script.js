@@ -388,7 +388,6 @@ function getEmbeddedPlatosFallback() {
         { id: 15, nombre: "1/4 Asado", precio: 10000, categoria: "Pollo", imagen: "Broaster10.jpg" },
         { id: 16, nombre: "Alitas BBQ", precio: 15000, categoria: "Pollo", imagen: "Alitas.jpg" },
         { id: 17, nombre: "Alitas Promo 2 x1 ", precio: 15000, categoria: "Pollo", imagen: "alitas2x1.jpg" },
-        { id: 113, nombre: "Uno", precio: 12000, categoria: "Pollo", imagen: "6.jpg" },
         { id: 20, nombre: "4 Estaciones", precio: 30000, categoria: "Pizzas", imagen: "4estaciones.jpg" },
         { id: 68, nombre: "4 Sabores Familiar", precio: 80000, categoria: "Pizzas", imagen: "saborfamiliar.jpg" },
         { id: 31, nombre: "Charcutera", precio: 30000, categoria: "Pizzas", imagen: "charcutera.jpg" },

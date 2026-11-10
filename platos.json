@@ -397,12 +397,5 @@
         "precio":  30000,
         "categoria":  "Pollo",
         "imagen":  "asadoentero.jpg"
-    },
-    {
-        "id":  113,
-        "nombre":  "Uno",
-        "precio":  12000,
-        "categoria":  "Pollo",
-        "imagen":  "6.jpg"
     }
 ]

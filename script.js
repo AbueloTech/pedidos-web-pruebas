@@ -318,14 +318,17 @@ async function handleConfirmOrder() {
     // Construir la carga útil para la tabla 'pedidos' de Supabase
     // Como cada fila representa una unidad/plato pedido con estado='Pendiente':
     const payload = [];
-    cart.forEach(item => {
-        for (let i = 0; i < item.cantidad; i++) {
-            payload.push({
-                producto: item.nombre,
-                estado: 'Pendiente'
-            });
-        }
-    });
+    
+// Construir un registro por producto, conservando su cantidad
+const cliente = customerNameInput.value.trim();
+
+const payload = cart.map(item => ({
+    producto: item.nombre,
+    cantidad: item.cantidad,
+    cliente: cliente,
+    estado: 'Pendiente'
+}));
+
 
     try {
         const { data, error } = await supabaseClient

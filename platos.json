@@ -362,14 +362,7 @@
         "precio":  40000,
         "categoria":  "Pollo",
         "imagen":  "combofamilia.jpg"
-    },
-    {
-        "id":  6,
-        "nombre":  "Irresistible",
-        "precio":  33000,
-        "categoria":  "Pollo",
-        "imagen":  "irresistible.jpg"
-    },
+    }
     {
         "id":  8,
         "nombre":  "Medio Broaster",

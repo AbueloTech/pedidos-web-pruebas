@@ -378,7 +378,6 @@ function getEmbeddedPlatosFallback() {
         { id: 9, nombre: "1/4 Broaster", precio: 10000, categoria: "Pollo", imagen: "1-1 - copia.jpg" },
         { id: 4, nombre: "Clásica Full", precio: 40000, categoria: "Pollo", imagen: "comboclasico - copia.jpg" },
         { id: 5, nombre: "Clásica", precio: 40000, categoria: "Pollo", imagen: "clasica.jpg" },
-        { id: 6, nombre: "Irresistible", precio: 33000, categoria: "Pollo", imagen: "irresistible.jpg" },
         { id: 7, nombre: "Ahorro", precio: 32000, categoria: "Pollo", imagen: "comboahorro.jpg" },
         { id: 10, nombre: "Combo Especial", precio: 26000, categoria: "Pollo", imagen: "comboespecial.jpg" },
         { id: 11, nombre: "Combo Hot Familiar", precio: 40000, categoria: "Pollo", imagen: "combofamilia.jpg" },

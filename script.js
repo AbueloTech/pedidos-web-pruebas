@@ -412,7 +412,7 @@ function getEmbeddedPlatosFallback() {
         { id: 80, nombre: "Burger Mixta", precio: 18000, categoria: "Hamburguesas", imagen: "Hamb5.jpg" },
         { id: 78, nombre: "Burger Pollo", precio: 12000, categoria: "Hamburguesas", imagen: "Hamb4.jpg" },
         { id: 79, nombre: "Burger doble carne", precio: 18000, categoria: "Hamburguesas", imagen: "Hamb3.jpg" },
-        { id: 69, nombre: "Agua Mineral", precio: 3000, categoria: "Bebidas", imagen: "aguavida.jpg" },
+        { id: 69, nombre: "Agua Mineral", precio: 3000, categoria: "Bebidas", imagen: "bebida7.jpg" },
         { id: 72, nombre: "Cerveza Lata", precio: 4000, categoria: "Bebidas", imagen: "bebida10.jpg" },
         { id: 85, nombre: "CocaCola 1.5 Lt", precio: 6000, categoria: "Bebidas", imagen: "cocacolalitron.jpg" },
         { id: 86, nombre: "Gaseosa Personal", precio: 3000, categoria: "Bebidas", imagen: "cocacolapersonal.jpg" },

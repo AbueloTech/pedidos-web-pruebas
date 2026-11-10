@@ -401,7 +401,7 @@ function getEmbeddedPlatosFallback() {
         { id: 27, nombre: "Combo Gold Pizza", precio: 45000, categoria: "Pizzas", imagen: "goldpizza.jpg" },
         { id: 26, nombre: "Combo Mix Pizza", precio: 45000, categoria: "Pizzas", imagen: "tripizza.jpg" },
         { id: 25, nombre: "Combo Pepperoni", precio: 60000, categoria: "Pizzas", imagen: "combopepe.jpg" },
-        { id: 18, nombre: "Doble Jamón y Queso", precio: 30000, categoria: "Pizzas", imagen: "pizza5.jpg" },
+        { id: 18, nombre: "Doble Jamón y Queso", precio: 30000, categoria: "Pizzas", imagen: "doblequeso.jpg" },
         { id: 19, nombre: "Doble Queso", precio: 35000, categoria: "Pizzas", imagen: "pizzaqueso.jpg" },
         { id: 30, nombre: "Hawaiana", precio: 30000, categoria: "Pizzas", imagen: "hawaiana.jpg" },
         { id: 32, nombre: "Trio Especial", precio: 70000, categoria: "Pizzas", imagen: "trioespecial.jpg" },

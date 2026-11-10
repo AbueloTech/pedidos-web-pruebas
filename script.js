@@ -306,6 +306,7 @@ function renderCartModalItems() {
 }
 
 // Confirmar y Enviar Pedido a Supabase
+
 async function handleConfirmOrder() {
     if (cart.length === 0) return;
 
@@ -315,20 +316,15 @@ async function handleConfirmOrder() {
     modalStatusMessage.className = "status-msg loading";
     modalStatusMessage.classList.remove('hidden');
 
-    // Construir la carga útil para la tabla 'pedidos' de Supabase
-    // Como cada fila representa una unidad/plato pedido con estado='Pendiente':
-    const payload = [];
-    
-// Construir un registro por producto, conservando su cantidad
-const cliente = customerNameInput.value.trim();
+    // Un registro por producto, con cantidad y cliente
+    const cliente = customerNameInput.value.trim();
 
-const payload = cart.map(item => ({
-    producto: item.nombre,
-    cantidad: item.cantidad,
-    cliente: cliente,
-    estado: 'Pendiente'
-}));
-
+    const payload = cart.map(item => ({
+        producto: item.nombre,
+        cantidad: item.cantidad,
+        cliente: cliente,
+        estado: 'Pendiente'
+    }));
 
     try {
         const { data, error } = await supabaseClient
@@ -337,19 +333,20 @@ const payload = cart.map(item => ({
 
         if (error) throw error;
 
-        // Éxito: cerrar modal de compra y mostrar modal de éxito
         closeCartModal();
         showOrderSuccess(cart);
 
-        // Limpiar carrito
         cart = [];
         updateCartUI();
-        renderProducts(); // refrescar botones de tarjetas
+        renderProducts();
 
     } catch (err) {
         console.error("Error al enviar el pedido:", err);
-        modalStatusMessage.textContent = "Hubo un error al enviar tu pedido: " + (err.message || 'Error de conexión');
+        modalStatusMessage.textContent =
+            "Hubo un error al enviar tu pedido: " +
+            (err.message || 'Error de conexión');
         modalStatusMessage.className = "status-msg error";
+
     } finally {
         btnConfirmOrder.disabled = false;
         btnConfirmOrder.textContent = "🚀 Confirmar y Enviar Pedido";

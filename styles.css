@@ -283,6 +283,24 @@ body {
     min-height: 2.6em;
 }
 
+.card-desc {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: #64748b;
+    margin: 0 0 8px;
+    white-space: pre-line;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-desc.expanded {
+    -webkit-line-clamp: unset;
+    display: block;
+}
+
 .card-price {
     font-size: 1.05rem;
     font-weight: 800;

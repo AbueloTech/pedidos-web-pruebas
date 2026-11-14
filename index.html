@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terreno Broaster | Pedidos Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Supabase JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand">
+                <div class="brand-logo">🍗</div>
+                <div>
+                    <h1>Terreno Broaster</h1>
+                    <p class="brand-subtitle">Carta digital y pedidos en línea</p>
+                </div>
+            </div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Buscar plato o bebida..." autocomplete="off">
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de Categorías -->
+    <nav class="categories-bar" id="categoriesBar">
+        <!-- Renderizado dinámicamente con JavaScript -->
+    </nav>
+
+    <!-- Contenido Principal: Cuadrícula de Platos -->
+    <main class="main-container">
+        <div class="catalog-header">
+            <h2 id="currentCategoryTitle">Todos los platos</h2>
+            <span class="catalog-count" id="catalogCount">0 productos</span>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Renderizado dinámicamente -->
+        </div>
+
+        <div id="noResults" class="no-results hidden">
+            <div class="empty-icon">🍽️</div>
+            <h3>No encontramos platos con ese criterio</h3>
+            <p>Intenta con otra palabra o selecciona otra categoría.</p>
+        </div>
+    </main>
+
+    <!-- Barra Flotante de Carrito -->
+    <div id="floatingCart" class="floating-cart hidden">
+        <div class="floating-cart-inner">
+            <div class="cart-summary">
+                <div class="cart-badge" id="cartCountBadge">0</div>
+                <div>
+                    <span class="cart-label">Tu Pedido</span>
+                    <strong class="cart-total" id="cartTotalDisplay">$0 COP</strong>
+                </div>
+            </div>
+            <button class="btn-view-order" id="btnOpenCart">Ver Pedido ➔</button>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito / Confirmación de Pedido -->
+    <div id="cartModal" class="modal-backdrop hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <h3>🛒 Resumen de tu pedido</h3>
+                    <p class="modal-subtitle">Revisa los productos antes de enviar</p>
+                </div>
+                <button class="btn-close-modal" id="btnCloseCart">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="cart-items-list" id="cartItemsList">
+                    <!-- Filas del carrito dinámicas -->
+                </div>
+
+                <div class="order-form">
+                    <label for="orderOrigin">Tipo de pedido:</label>
+                    <select id="orderOrigin">
+                        <option value="Online" selected>Online (domicilio)</option>
+                        <option value="Local">Local (en el restaurante)</option>
+                    </select>
+
+                    <label for="customerName">Nombre del cliente:</label>
+                    <input type="text" id="customerName" placeholder="Ej: Carlos Pérez" autocomplete="name">
+
+                    <label for="customerPhone">Teléfono:</label>
+                    <input type="tel" id="customerPhone" placeholder="Ej: 3001234567" inputmode="tel" autocomplete="tel">
+
+                    <div id="addressGroup">
+                        <label for="customerAddress">Dirección:</label>
+                        <input type="text" id="customerAddress" placeholder="Ej: Calle 10 #5-20, Barrio Centro" autocomplete="street-address">
+                    </div>
+
+                    <label for="orderNotes">Notas especiales (Opcional):</label>
+                    <input type="text" id="orderNotes" placeholder="Ej: Sin salsa, bien cocido...">
+                </div>
+
+                <div class="modal-total-section">
+                    <span>Total a Pagar:</span>
+                    <strong class="total-big" id="modalTotalBig">$0 COP</strong>
+                </div>
+
+                <div id="modalStatusMessage" class="status-msg hidden"></div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-secondary" id="btnContinueShopping">Seguir pidiendo</button>
+                <button class="btn-primary" id="btnConfirmOrder">🚀 Confirmar y Enviar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Éxito al Enviar Pedido -->
+    <div id="successModal" class="modal-backdrop hidden">
+        <div class="modal-card modal-success">
+            <div class="success-icon">🎉</div>
+            <h3>¡Pedido enviado con éxito!</h3>
+            <p>Tu orden ya fue recibida en la caja de <strong>Terreno Broaster</strong> y está en proceso de atención.</p>
+            <div class="success-details" id="successDetails"></div>
+            <button class="btn-primary" id="btnSuccessOk">Hacer otro pedido</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
